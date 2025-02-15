@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100%;
+            min-height: 60vh;
+            margin: 0;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .main {
+            width: 1110px;
+            height: 700px;
+            margin-top: 50px;
+            border: .50rem solid rgb(105, 186, 218);
+            background-image: url("/Assets/bg.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+        }
+
+        .border {
+            width: 1070px;
+            height: 660px;
+            border: 3px solid rgb(105, 186, 218);
+            margin: 10px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .logo2 {
+            display: flex;
+            justify-content: left;
+        }
+
+        .main img {
+            height: 95px;
+            width: 300px;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(-20px); /* Move content upwards */
+        }
+
+        .main h1 {
+            font-style: italic;
+            font-size: 2rem;
+        }
+
+        hr {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .name-container {
+            margin-top: 10px;
+        }
+
+        .name-container h1 {
+            margin-bottom: 4px;
+            font-size: 1.8rem;
+            color: rgb(105, 186, 218);
+        }
+
+        b {
+            color: rgb(105, 186, 218);
+        }
+
+        .sign{
+            transform: translateY(10px);
+        }
+        .dir {
+            text-align: center;
+            margin-right: 10px;
+            margin-left: 10px;
+            transform: translateY(30px);
+        }
+
+        .dir p {
+            font-size: small;
+        }
+
+        .dir h4 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            transform: translateY(10px);
+        }
+
+        .main .sign {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .medallogo {
+            margin: auto;
+            transform: translateY(-10px);
+        }
+
+        .medallogo img {
+            width: 140px;
+            height: 140px;
+        }
+        .flex{
+            display: flex;
+        }
+        .justify-between{
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <section class="main" id="main">
+        <section class="border">
+        <div class="flex justify-between">
+                <img style="margin-top: 10px;" src="/Assets/logo.png">
+            <div style="transform: translateY(-5px);">
+                <h1 style="text-transform: capitalize;">Internship Completion</h1>
+                <h1 style="margin-left: 65px; transform: translateY(-12px); text-transform: capitalize;">Certificate</h1>
+            </div>
+            <img style="width: 200px;" src="https://mangosorange.com/assets/img/MOLogo.png" alt="">
+        </div>
+        
+            <div class="intro">
+                <h3 style="width: 95%; text-align: left; word-spacing: 8px; line-height: 31px;">
+                    This is to certify that <%= data.basicInfo ? data.basicInfo.name : 'N/A' %> successfully completed the role of Frontend Developer as a Software Developer Intern in the GoHackathon Project at MangosOrange Company, from July 20, 2024 to September 5, 2024. During this period, <%= data.basicInfo ? data.basicInfo.name : 'N/A' %> made valuable contributions to the development and implementation of various features using React, showcasing their technical expertise and commitment to the project's success.                </h3>
+                <h3 style="width: 95%; text-align: left; word-spacing: 8px; line-height: 31px;">
+                    This achievement demonstrates <%= data.basicInfo ? data.basicInfo.name : 'N/A' %>'s strong technical skills, creativity, and teamwork in a professional software development environment.
+                </h3>
+            </div>
+            
+            <div class="sign">
+                <div class="dir">
+                    <img style="color: black; position: absolute ; transform: translate3d(-160px, -65px, 0px);" src="/Assets/signature.png" alt="">
+                    <h4 style="border-top: 2px solid black ; padding-top: 15px;">Mr. Ravi Rautela</h4>
+                    <p>Founder & CEO</p>
+                    <p style="transform: translateX(15px);">Mangosorange Agritech India Pvt. Ltd.</p>
+                </div>
+                <div class="medallogo">
+                    <img src="/Assets/medal.png">
+                </div>
+                <div class="dir">
+                    <img style="color: black; position: absolute ; transform: translate3d(-177px, -65px, 0px);" src="/Assets/signature.png" alt="">
+                    <h4 style="border-top: 2px solid black ; padding-top: 15px;">Ms. Rama Bist</h4>
+                    <p>Director</p>
+                    <p style="transform: translateX(-10px);">Mangosorange Service Pvt. Ltd.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
